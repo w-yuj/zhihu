@@ -111,7 +111,7 @@ export default {
         let barHeight = this.barHeight
         if (-pos.y > h1 && -pos.y < h2) {
           if (-pos.y < h1 + barHeight && i !== 0) {
-            this.$emit('moveBar', h1 + pos.y)
+            this.$emit('moveBar', h1 + pos.y, this.calcTitle(i - 1))
           } else if (-pos.y > h1 + barHeight) {
             this.$emit('moveBar', 0, this.calcTitle(i))
           }
